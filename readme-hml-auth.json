@@ -22,6 +22,7 @@
           "Autenticação"
         ],
         "summary": "Autenticação JWT",
+        "description": "Este endpoint realiza a autenticação via JWT.\n\n**Headers obrigatórios:**\n- `basic`: credenciais em base64\n- `x-origem`: nome da empresa de origem\n\n> Exemplo de uso no Postman disponível [aqui](https://link.exemplo.com)",
         "parameters": [
           {
             "name": "basic",
