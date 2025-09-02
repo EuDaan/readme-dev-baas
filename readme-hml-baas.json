@@ -936,63 +936,58 @@
       }
     },
     "/v1/pix/status-callback/{endToEndId}": {
-        "servers": [
-            {
-                "url": "https://TESTE.COM.BR"
-            }
+      "get": {
+        "tags": [
+          "Operações"
         ],
-        "get": {
-            "tags": [
-                "Operações"
-            ],
-            "summary": "Consultar Saque - Registro disponível por duas horas",
-            "parameters": [
-                {
-                    "name": "endToEndId",
-                    "in": "path",
-                    "description": "",
-                    "required": true,
-                    "schema": {
-                        "type": "string"
-                    }
-                }
-            ],
-            "responses": {
-                "200": {
-                    "description": "Success",
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PixStatusResponse"
-                            }
-                        }
-                    }
-                },
-                "204": {
-                    "description": "No Content"
-                },
-                "404": {
-                    "description": "Not Found",
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ProblemDetails"
-                            }
-                        }
-                    }
-                },
-                "500": {
-                    "description": "Server Error",
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/ErrorMessage"
-                            }
-                        }
-                    }
-                }
+        "summary": "Consultar Saque - Registro disponível por duas horas",
+        "parameters": [
+          {
+            "name": "endToEndId",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PixStatusResponse"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorMessage"
+                }
+              }
+            }
+          }
         }
+      }
     }
    
   },
